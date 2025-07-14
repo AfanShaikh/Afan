@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure & Canvas Tags</title>
+</head>
+<body>
+    <!-- Figure Tag -->
+    <figure>
+        <img style="width: 350px; height: 250px;" src="https://imgs.search.brave.com/4HWx-bC2z3Zk7kTVtanpOYhFmcDnUjRKlwYDBCrz1D4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC82L2Yv/Mi84NzU1MTMtMTk4/NXgxMzI1LWRlc2t0/b3AtaGQta29pLXdh/bGxwYXBlci1waG90/by5qcGc" alt="Koi Fish">
+    </figure>
+    <figcaption>
+        In Japan they symbolize just about everything thats good: wealth, love, and career success. 
+        They often outlive their owners, having a lifespan of between 40 and 200 years, and can be 
+        passed down from generation to generation along with the silver and china! But the best thing 
+        about koi is their intelligence: they recognize their owners and will even eat from the hands of a trusted person.
+    </figcaption><br>
+    <h1>Canvas Example</h1>
+    <canvas width="800" height="800" id="myCanvas" style="border: 9px solid #141e30;">
+    </canvas>
+</body>
+<script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+    //Draw a rectangle
+    ctx.fillStyle = "#ff7e5f";
+    ctx.fillRect(50 ,50 ,200 , 60);
+    //Draw a Circle
+   ctx.beginPath();
+    ctx.fillStyle = "#feb47b";
+    ctx.arc(100 ,200 ,40 , 0, 2*Math.PI);
+    ctx.fill();
+    //Draw a line
+    ctx.beginPath();
+    ctx.moveTo(0 , 0);
+    ctx.lineTo(800 , 797);
+    ctx.strokeStyle ="#f83600";
+    ctx.lineWidth = 10;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(800 , 0);
+    ctx.lineTo(0 , 797);
+    ctx.strokeStyle ="#f9d423";
+    ctx.lineWidth = 10;
+    ctx.stroke(); 
+</script>
+</html>

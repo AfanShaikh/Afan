@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+     body{
+       background: linear-gradient(to right, #9d50bb, #6e48aa); 
+     }
+    </style>
+</head>
+<body>
+    <fieldset>                                              
+    <legend style="text-transform: capitalize; font-size: x-large; font-weight: bolder;">form</legend>
+    <form class="form">
+       <label>Name</label>
+       <input required type="text" placeholder="Enter the name "/><br>
+       <label>Email</label>
+       <input required type="email" placeholder="Enter the email "/><br>
+       <fieldset>
+       <legend>Gender</legend>
+       <label>Male</label>
+       <input required type="radio" placeholder="Enter the name "/><br>
+       <label>Female</label>
+       <input required type="radio" placeholder="Enter the name"/><br>   
+       </fieldset>
+       <label>Phone No</label>
+       <input required type="tel" placeholder="Enter the name "/><br>
+       <label>Country</label>
+       <select>
+        <option value="india">INDIA</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="china">CHINA</option>
+        <option value="japan">JAPAN</option>
+       </select><br>
+       <label>Address</label>
+       <textarea  cols="50" rows="10" placeholder="Enter the area"></textarea><br>
+       <label>Time</label>
+       <input type="time">
+       <label>Date</label>
+       <input type="date">
+       <label>CheckBox</label>
+       <input type="checkbox">
+       <input type="file"></input>
+       <button type="submit">Submit</button>
+    </form>
+    </fieldset>
+</body>
+</html>

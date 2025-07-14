@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body
+        {
+            background: linear-gradient(to right, #9d50bb, #6e48aa);
+        }
+    </style>
+</head>
+<body>
+  <h2>Application Form</h2>
+    <form>
+        <label>First Name:</label>
+        <input required type="text" placeholder="Enter The First Name" minlength="0" maxlength="15">
+        
+        <label>Last Name:</label>
+        <input required type="text"placeholder="Enter The Last Name"><br><br>
+
+        <label>Date of birth:</label>
+        <input required type="date" placeholder="dob">
+
+        <label>Age:</label>
+        <input required type="number" name="age" min="0" max="100"><br><br>
+
+        Gender:
+        <input required type="radio" name="gender" value="male">
+        <label>Male</label>
+        <input required type="radio" name="gender" value="female">
+        <label >Female</label><br><br>
+
+        <label>Email Address:</label>
+        <input required type="email" placeholder="Enter Email Address" minlength="0" maxlength="50"><br><br>
+
+        Positions Available:
+        <input required type="radio" name="position" value="junior">
+        <label>Junior Developer</label>
+
+        <input required type="radio"  name="position" value="mid">
+        <label>Mid-level Developer</label>
+
+        <input required type="radio" name="position" value="senior">
+        <label>Senior Developer</label><br><br>
+
+        Programming Languages:<br>
+        <input required type="checkbox" placeholder="language" value="Java">
+        <label>Java</label>
+
+        <input required type="checkbox" placeholder="language" value="JavaScript">
+        <label>JavaScript</label>
+
+        <input required type="checkbox" placeholder="language" value="Python">
+        <label>Python</label><br><br>
+
+        <label>Password:</label>
+        <input required type="password" name="password">
+
+        <label>Confirm Password:</label>
+        <input required type="password" name="confirm"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
