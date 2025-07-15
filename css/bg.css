@@ -1,0 +1,14 @@
+body
+{
+    height: 100vh;
+    border: 6px solid black;
+    background: aqua;
+}
+.img
+{
+    height: inherit;
+    background-image: url(../utils_/1330235.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
