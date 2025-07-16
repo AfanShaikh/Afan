@@ -1,0 +1,13 @@
+.contant-img {
+    border: 1px solid aquamarine;
+}
+
+.contant-img > img {
+    width: 850px;
+    height: 500px;
+    opacity: 0.2;
+}
+
+.contant-img > img:hover {
+    opacity: 2;
+}

@@ -1,0 +1,24 @@
+* {
+    /* universal selection */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-scale {
+    width: 400px;
+    height: 300px;
+    /* border: 1px solid aqua; */
+    margin: 150px auto;
+}
+body{
+    border: 5px solid blue;
+}
+img{
+    height: inherit;
+    width: inherit;
+    margin: auto 50px;
+    scale: 0.5;
+}
+img:hover{
+    scale: 2;
+}
