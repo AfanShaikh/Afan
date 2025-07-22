@@ -7,7 +7,7 @@ console.log("Welcome to the Dummy JS File!");
 const users = [
   { id: 1, name: "Alice", age: 24 },
   { id: 2, name: "Bob", age: 30 },
-  { id: 3, name: "Charlie", age: 28 }
+  { id: 3, name: "Charlie", age: 28 },
 ];
 
 // Function to greet a user
@@ -50,7 +50,7 @@ const calculator = {
   },
   cube(n) {
     return n * n * n;
-  }
+  },
 };
 
 console.log("Square of 4:", calculator.square(4));

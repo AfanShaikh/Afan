@@ -1,18 +1,18 @@
-:root{
-    --width: 300px;
-    --width-1: 100px;
-    --height: 100px;
-    --height-1: 300px;
+:root {
+  --width: 300px;
+  --width-1: 100px;
+  --height: 100px;
+  --height-1: 300px;
 }
-.container{
-    border: 5px solid #360033;
-    width: 200px;
-    height: 150px;
-    background: #0b8793;
+.container {
+  border: 5px solid #360033;
+  width: 200px;
+  height: 150px;
+  background: #0b8793;
 }
-.container_1{
-    border: 5px solid #f83600;
-    width: calc(var(--width-1) + var( --width));
-    height: calc(var(--height-1) + var(--height));
-    background:#f9d423 ;
+.container_1 {
+  border: 5px solid #f83600;
+  width: calc(var(--width-1) + var(--width));
+  height: calc(var(--height-1) + var(--height));
+  background: #f9d423;
 }

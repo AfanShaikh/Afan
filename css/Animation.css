@@ -1,72 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.Hello{
-    text-transform: capitalize;
-    font-size: 85px;
-    font-family: Poppins;
-    font-weight: 700;
-    text-align: center;
+.Hello {
+  text-transform: capitalize;
+  font-size: 85px;
+  font-family: Poppins;
+  font-weight: 700;
+  text-align: center;
 }
-.Afan{
-    text-transform: capitalize;
-    font-size: 85px;
-    font-family: Roboto;
-    text-align: center;
-    font-weight: 300;
+.Afan {
+  text-transform: capitalize;
+  font-size: 85px;
+  font-family: Roboto;
+  text-align: center;
+  font-weight: 300;
 }
 /* animation */
-.Hello:hover{
-    transition-timing-function: ease-out;
-    transition-duration: 2s;
-    transition-delay: 0.1s;
-    transform: scale(1.5);
+.Hello:hover {
+  transition-timing-function: ease-out;
+  transition-duration: 2s;
+  transition-delay: 0.1s;
+  transform: scale(1.5);
 }
-.animation{
-    animation-name: Naina;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    text-align: center;
-    font-size: 85px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: Roboto;
-    background: chartreuse;
+.animation {
+  animation-name: Naina;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  text-align: center;
+  font-size: 85px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Roboto;
+  background: chartreuse;
 }
 @keyframes Naina {
-    from{
-        translate: 200vw 0;
-        scale: 200% 1;
-    }
-    to{
-        translate: 0 0;
-        scale: 100% 1;
-    }
+  from {
+    translate: 200vw 0;
+    scale: 200% 1;
+  }
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
 }
-.animation2{
-    animation-name: Sunaina;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    text-align: center;
-    font-size: 85px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: Roboto;
-    background: rosybrown;
+.animation2 {
+  animation-name: Sunaina;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  text-align: center;
+  font-size: 85px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Roboto;
+  background: rosybrown;
 }
 @keyframes Sunaina {
-    from{
-        translate: -200vw 0;
-        scale: 200% 1;
-    }
-    to{
-        translate: 0 0;
-        scale: 100% 1;
-    }
+  from {
+    translate: -200vw 0;
+    scale: 200% 1;
+  }
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
 }

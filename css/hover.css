@@ -1,14 +1,14 @@
-.btn{
-    width: 100px;
-    height: 50px;
-    background-color: #243b55;
-    color: #141e30;
-    border: none;
-    outline: none;
-    text-transform: capitalize;
+.btn {
+  width: 100px;
+  height: 50px;
+  background-color: #243b55;
+  color: #141e30;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
 }
-.btn:hover{
-    background-color: #000428;
-    color: #004e92;
-    cursor: pointer;
+.btn:hover {
+  background-color: #000428;
+  color: #004e92;
+  cursor: pointer;
 }

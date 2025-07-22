@@ -1,28 +1,28 @@
 .container {
-    border: 5px solid yellowgreen;
-    height: 95vh;
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    align-items: center;
+  border: 5px solid yellowgreen;
+  height: 95vh;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
 }
 .box {
-    width: 150px;
-    height: 150px;
-    background: pink;
+  width: 150px;
+  height: 150px;
+  background: pink;
 }
 .child-1 {
-    transform: skewX(20deg);
+  transform: skewX(20deg);
 }
 .child-2 {
-    transform: skewY(20deg);
+  transform: skewY(20deg);
 }
 .child-3 {
-    transform: skew(20deg ,20deg);
+  transform: skew(20deg, 20deg);
 }
 .child-4 {
-    transform: skew(50deg ,60deg);
+  transform: skew(50deg, 60deg);
 }
 .child-5 {
-    transform: skew(40deg ,-20deg);
+  transform: skew(40deg, -20deg);
 }

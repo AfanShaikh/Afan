@@ -1,41 +1,49 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color:black
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
 }
-h1
-{
-    text-transform: capitalize;
-    font-size: 70px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
-    text-align: center;
-    background: linear-gradient(180deg,orange,white,green);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+h1 {
+  text-transform: capitalize;
+  font-size: 70px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(180deg, orange, white, green);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.container{
-    margin-top: 300px;
-    background: linear-gradient(to right bottom ,gray, pink,red );
-    padding: 40px 0;
+.container {
+  margin-top: 300px;
+  background: linear-gradient(to right bottom, gray, pink, red);
+  padding: 40px 0;
 }
- 
-.radial{
-    width: 200px;
-     height: 200px;
-    /* background:radial-gradient(circle,red,blue,green,yellow);  */
-    background: repeating-radial-gradient(black,white,black);
-    border: 5px solid gray;
-    /* margin-top: 200px; */
-    margin-left: 600px;
+
+.radial {
+  width: 200px;
+  height: 200px;
+  /* background:radial-gradient(circle,red,blue,green,yellow);  */
+  background: repeating-radial-gradient(black, white, black);
+  border: 5px solid gray;
+  /* margin-top: 200px; */
+  margin-left: 600px;
 }
-.conic{
-    margin-left: 600px;
-    margin-top: 200px;
-    width: 200px;
-    height: 200px;
-    background: conic-gradient(from 0deg at center,red, blue, green, yellow,orange,purple,indigo );
-    border: 5px solid #000;
-    border-radius: 50%;
+.conic {
+  margin-left: 600px;
+  margin-top: 200px;
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(
+    from 0deg at center,
+    red,
+    blue,
+    green,
+    yellow,
+    orange,
+    purple,
+    indigo
+  );
+  border: 5px solid #000;
+  border-radius: 50%;
 }
