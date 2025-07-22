@@ -1,0 +1,23 @@
+body{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+div{
+    /* box-shadow: offsetx offsety blureradius spreadradius color; */
+    box-shadow: 10px 10px 15px 10px lightgreen;
+    /* for cards or sqr shape  */
+    width: 250px;
+    height: 200px;
+    background: lightseagreen;
+}
+img{
+    height: 250px;
+    width: 250px;
+    filter:drop-shadow(10px 10px 15px purple);
+}
+h1{
+    /* text-shadow:offset-x offset-y blur-radius color */
+    text-shadow: 10px 10px 15px magenta;
+}
