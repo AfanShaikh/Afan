@@ -1,0 +1,6 @@
+table,
+th,
+td {
+  border: 2px outset gray;
+  /* background: linear-gradient(to left bottom, #f83600, #f9d423); */
+}
