@@ -1,0 +1,148 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+.sticky-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.sticky-header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+.sticky-header nav {
+  margin-top: 10px;
+}
+
+.sticky-header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sticky-header nav a:hover {
+  color: #4caf50;
+}
+
+.parallax-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.parallax-section .content {
+  max-width: 800px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+.parallax-section h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.parallax-section h3 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #4caf50;
+}
+
+.parallax-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.bg-image-1 {
+  background: url("https://via.placeholder.com/1920x1080/4CAF50/FFFFFF?text=Forest+Background")
+    no-repeat center center / cover;
+  background-attachment: fixed;
+}
+
+.bg-image-2 {
+  background: url("https://via.placeholder.com/1920x1080/2196F3/FFFFFF?text=Mountain+Background")
+    no-repeat center center / cover;
+  background-attachment: fixed;
+}
+
+.content-section {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.content-section .content {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .parallax-section h2 {
+    font-size: 2.2em;
+  }
+  .parallax-section h3 {
+    font-size: 1.8em;
+  }
+  .parallax-section p {
+    font-size: 1em;
+  }
+  .sticky-header h1 {
+    font-size: 1.5em;
+  }
+  .sticky-header nav a {
+    margin: 0 10px;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-section .content {
+    padding: 20px;
+  }
+  .sticky-header {
+    padding: 10px 0;
+  }
+  .sticky-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sticky-header nav a {
+    margin: 5px 8px;
+  }
+}
