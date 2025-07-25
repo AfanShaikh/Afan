@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playwrite+AU+QLD:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-image: url("../css/utils/bg4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+h2 {
+  font-family: "Playwrite AU QLD";
+  font-size: x-large;
+  font-weight: bolder;
+  color: blueviolet;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  background-color: dodgerblue;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  font-weight: bolder;
+  transition: transform 0.5s ease;
+  font-family: "Playwrite AU QLD";
+  font-size: small;
+}
+.translate:hover {
+  transform: translate(500px, 250px);
+}
+.rotate:hover {
+  transform: rotate(360deg);
+}
+.scale:hover {
+  transform: scale(1.5);
+}
+.skew:hover {
+  transform: skew(50deg, 40deg);
+}
