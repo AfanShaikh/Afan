@@ -1,8 +1,3 @@
-/* That's a great start for a 3D rotating image gallery! To make it more robust and versatile, I'll provide a modified version focusing on better organization, readability, and some common improvements.
-
-CSS
-
-/* Universal Box-Sizing */
 *,
 *::before,
 *::after {
@@ -11,31 +6,25 @@ CSS
   box-sizing: border-box;
 }
 
-/* Body Styling for Centering Content */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(150deg, #d6f044, #2f93da); /* Use hex codes for consistency */
-  overflow: hidden; /* Prevent scrollbars if content slightly exceeds viewport */
+  background: linear-gradient(150deg, #d6f044, #2f93da);
+  overflow: hidden;
 }
 
-/* 3D Container for the Rotating Box */
 .box {
   position: relative;
   width: 200px;
   height: 300px;
   transform-style: preserve-3d;
-  animation: rotateBox 20s linear infinite; /* Renamed animation for clarity */
+  animation: rotateBox 20s linear infinite;
 }
-
-/* Pause animation on hover */
 .box:hover {
   animation-play-state: paused;
 }
-
-/* Keyframe Animation for Box Rotation */
 @keyframes rotateBox {
   0% {
     transform: perspective(1000px) rotateY(0deg);
@@ -44,8 +33,6 @@ body {
     transform: perspective(1000px) rotateY(360deg);
   }
 }
-
-/* Individual Image Spans within the Box */
 .box span {
   position: absolute;
   top: 0;
@@ -54,28 +41,25 @@ body {
   height: 100%;
   transform-origin: center;
   transform-style: preserve-3d;
-  /* The '--i' custom property should be set in HTML for each span */
   transform: rotateY(calc(var(--i) * 36deg)) translateZ(450px);
-  /* Adjusted reflect color for better subtlety */
-  -webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.1));
-}
 
-/* Styling for Images */
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, transparent, rgba(4, 4, 4, 0.1));
+}
 .box span img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures images cover the area without distortion */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 15px;
-  border: 4px double #000000; /* Use hex codes for consistency */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Added a subtle shadow */
+  border: 4px double #000000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Image Hover Effect */
 .box span img:hover {
-  transform: translateY(-5px) scale(1.03); /* More pronounced lift and slight scale */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }

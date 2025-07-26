@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  background-image: url("../css/utils/bg9.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.parent {
+  width: inherit;
+  height: 60vh;
+  background-color: #004d98;
+  position: relative;
+  top: 100px;
+}
+.child,
+.child-2 >img {
+  border: 3px dotted #a50044;
+  background-color: #a50044;
+  position: absolute;
+  width: inherit;
+  height: 40vh;
+  top: 70px;
+  z-index: 3;
+}
+.child > img ,
+.child-2 >img{
+  width: auto;
+  height: 250px;
+  padding: 0 38%;
+}
+.child-2 >img{
+    background-color: #a50044;
+    top: 140px;
+    z-index: 1;
+}
