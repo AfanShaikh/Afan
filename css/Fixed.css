@@ -1,0 +1,13 @@
+.parent {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: indigo;
+  color: bisque;
+  height: 75px;
+}
+body {
+  border: 5px solid black;
+  height: 500vh;
+}

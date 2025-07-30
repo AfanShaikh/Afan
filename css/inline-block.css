@@ -1,0 +1,37 @@
+.div-1 {
+  display: inline;
+  color: yellow;
+  border: 1px solid white;
+  background: black;
+}
+.div-2 {
+  display: inline-block;
+  color: yellow;
+  border: 1px solid white;
+  background: black;
+}
+.div-3 {
+  display: none;
+  color: yellow;
+  border: 1px solid white;
+  background: black;
+}
+.div-4 {
+  display: block;
+  color: yellow;
+  border: 1px solid white;
+  background: black;
+}
+.h1 {
+  text-transform: uppercase;
+  color: aqua;
+  font-size: xx-large;
+}
+#h1 {
+  text-transform: uppercase;
+  color: aqua;
+  font-size: xx-large;
+}
+h4 {
+  color: aquamarine;
+}
