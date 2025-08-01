@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGE</title>
+    <style>
+fieldset {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 120px;
+}
+
+fieldset:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #a0a0a0;
+}
+legend {
+    /* font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px; */
+    border: none;
+}
+.Age {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #555;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.Age:hover {
+    border-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+.Age-1 option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.Age-1 option:hover {
+    background-color: blue;
+    color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+    </style>
+</head>
+<body>
+    <fieldset>
+        <!-- <legend style="text-transform: capitalize; font-size: x-large; font-weight: bolder;">AGE</legend> -->
+       <legend>  Age: </legend>
+      <!-- <input required type="number" name="age" min="0" max="100" /><br /><br /> -->
+       <select class="Age" name="select your age">
+        <div class="Age-1">
+        <option value="">---select---</option>
+        <option value="None">None</option>
+        <option value="Ten">Ten</option>
+        <option value="Twenty">Twenty</option>
+        <option value="Thirty">Thirty</option>
+        <option value="Fourty">Fourty</option>
+        </div>
+       </select>
+    </fieldset>
+</body>
+</html>
