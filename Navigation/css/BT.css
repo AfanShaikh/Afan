@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../utils/one\ piece.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+img {
+  width: 30px;
+  height: 30px;
+}
+.Navbar {
+  background: #6a0dad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 20px auto;
+  /* border: 1px solid black; */
+  padding: 5px 40px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+h1 {
+  font-family: Roboto ital;
+  font-size: large;
+  font-weight: bolder;
+  color: whitesmoke;
+}
+.svg-1 {
+  border-radius: unset;
+}
+.right,
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.text {
+  font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: bolder;
+  font-size: 36px;
+  text-transform: capitalize;
+  color: #242424;
+}
+.download-button {
+  background-color: #6a0dad;
+  border: 2px solid #ffcc00;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.download-button:hover {
+  background-color: #7b29c5;
+}
