@@ -1,0 +1,6 @@
+.container{
+    column-count: 3;
+    column-gap: 40px;
+    column-rule-style: dashed;
+    column-rule-width: 10px;
+}
