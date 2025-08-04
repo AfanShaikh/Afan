@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+html,
+body,
+ul {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.age_Select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.mainCont {
+  width: 20%;
+  padding: 10px 19px 17px;
+  border-radius: 20px;
+  border: 1px solid blue;
+}
+legend {
+  color: blue;
+}
+
+.select_tag_dummy_input:focus,
+.select_tag_dummy_input {
+  border: 0;
+  outline: 0;
+  outline: none;
+  appearance: none; /* removes default arrow */
+}
+
+.select_tag_dummy_div {
+  position: relative;
+}
+
+.select_tag_dummy_div::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  border-color: transparent transparent gray transparent; /* Arrow pointing down */
+  border-width: 10px;
+  border-style: solid;
+  rotate: 180deg;
+}
+
+.list {
+  display: none;
+  width: 19%;
+  margin: 10px 0;
+  padding: 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  /* visibility: hidden;
+  opacity: 0; */
+}
+
+li {
+  height: 50px;
+  padding: 0 15px;
+  line-height: 50px;
+}
+
+li:hover {
+  background: rgba(139, 139, 241, 0.623);
+  transition: all 0.5s ease-out;
+}
+/* 
+.list .select_tag_dummy_input:focus {
+  visibility: visible;
+  opacity: 1;
+} */
+.block {
+  display: block;
+  transition: all 0.5s ease-in;
+}

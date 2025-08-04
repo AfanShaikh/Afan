@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DropDown</title>
+    <link rel="stylesheet" href="../dropdown.css" />
+  </head>
+  <body>
+    <fieldset class="mainCont">
+      <legend>age</legend>
+      <div class="select_tag_dummy_div">
+        <input
+          id="select"
+          name="select"
+          class="select_tag_dummy_input"
+          type="text"
+        />
+      </div>
+    </fieldset>
+    <div id="dropdowns" class="list">
+      <ul>
+        <li><i>hello</i></li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    const body = document.querySelector("body");
+    const input = document.querySelector("#select");
+    const dropdowns = document.querySelector("#dropdowns");
+
+    input.addEventListener("focus", () => {
+      dropdowns.classList.add("block");
+    });
+
+    body.addEventListener("focusout", () => {
+      dropdowns.classList.remove("block");
+    });
+  </script>
+</html>
