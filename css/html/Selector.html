@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+    <link rel="stylesheet" href="../Selector.css" />
+  </head>
+  <body>
+    <!-- Combinator Selector -->
+    <!--! Starts Child Combinator -->
+    <div class="combinator">
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+    </div>
+    <!-- End Child Combinator -->
+    <!-- Start Descendant Combinator-->
+    <ul>
+      <li>
+        <div>Item 1</div>
+        <ul>
+          <li>Subitem A</li>
+          <li>Subitem B</li>
+        </ul>
+      </li>
+      <li>
+        <div>Item 2</div>
+        <ul>
+          <li>Subitem A</li>
+          <li>Subitem B</li>
+        </ul>
+      </li>
+    </ul>
+    <!-- End Descendant Combinator -->
+    <!-- Subsequent-Sibling Start -->
+    <article>
+      <span>This is not red because it appears before any paragraph.</span>
+      <p>Here is a paragraph.</p>
+      <code>Here is some code</code>
+      <span>
+        This span is red because it appears after the paragraph, even though
+        there are other nodes in between
+      </span>
+    </article>
+    <!-- Subsequent-Sibling End -->
+    <!-- Next-Sibling Start-->
+    <ul>
+      <li>One</li>
+      <li>Two!</li>
+      <li>Three</li>
+    </ul>
+    <!-- Next-Sibling End-->
+    <!-- NameSpace Start -->
+    <p>This Paragraaph <a href="#">has a link</a></p>
+    <svg width="400" viewBox="0 0 400 20">
+      <a href="#">
+        <text x="0" y="15">Link Created In SVG</text>
+      </a>
+    </svg>
+    <!-- NameSpace End -->
+    <!-- Nesting Selector Start -->
+    <p class="example">
+      This paragraph <a href="#">contains a link</a>,try hovering or focusing
+      it.
+      <!-- Nesting Selector End -->
+    </p>
+  </body>
+</html>

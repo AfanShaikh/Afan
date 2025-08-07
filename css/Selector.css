@@ -1,0 +1,126 @@
+@namespace svgNamespace url("http://www.w3.org/2000/svg");
+@namespace htmlNameSpace url("http://www.w3.org/1999/xhtml");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background: #000;
+  color: #fff; */
+}
+
+/* combinator selector */
+
+/* 
+! child-combinator: The child combinator (>) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first.
+*/
+.combinator > h1 {
+  color: red;
+}
+
+/* 
+# Descendant combinator: typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called descendant selectors.
+
+
+*/
+
+li {
+  list-style-type: disc;
+}
+li li {
+  list-style-type: circle;
+}
+
+/* 
+
+& The subsequent-sibling combinator (~, a tilde) separates two selectors and matches all instances of the second element that follow the first element (not necessarily immediately) and share the same parent element.
+
+span {
+  border: red 2px solid;
+}
+div {
+  border: red 2px solid;
+}
+
+span,
+div {
+  border: red 2px solid;
+}
+
+:is(span, div) {
+  border: red 2px solid;
+}
+
+*/
+p ~ span {
+  color: red;
+}
+
+/* 
+The next-sibling combinator (+) separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent element.
+*/
+
+li:first-of-type + li {
+  color: red;
+  font-weight: bold;
+}
+
+/* 
+
+nameSpace:- This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
+
+*/
+
+/* All `<a>`s in the default namespace, in this case, all `<a>`s */
+a {
+  font-size: 1.4rem;
+}
+/* no namespace */
+|a {
+  text-decoration: wavy overline lime;
+  font-weight: bold;
+}
+/* all namespaces (including no namespace) */
+*|a {
+  color: red;
+  fill: red;
+  font-style: italic;
+}
+/* only the svgNamespace namespace, which is <svg> content */
+svgNamespace|a {
+  color: green;
+  fill: green;
+}
+/* The htmlNameSpace namespace, which is the HTML document */
+htmlNameSpace|a {
+  text-decoration-line: line-through;
+}
+
+/* 
+& nesting selector start
+
+The CSS & nesting selector explicitly states the relationship between parent and child rules when using CSS nesting. It makes the nested child rule selectors relative to the parent element. Without the & nesting selector, the child rule selector selects child elements. The child rule selectors have the same specificity weight as if they were within :is().
+*/
+
+.example {
+  font-family: system-ui;
+  font-size: 1.2rem;
+  & > a {
+    color: tomato;
+    &:hover,
+    &:focus {
+      color: ivory;
+      background-color: tomato;
+    }
+  }
+}
