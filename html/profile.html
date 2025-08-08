@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub User Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black text-white flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-lg">
+      <form id="github-form" class="mb-4 flex gap-2">
+        <input
+          type="text"
+          id="usernameInput"
+          placeholder="Enter GitHub username"
+          class="flex-1 p-2 rounded border border-gray-600 bg-gray-800 text-white placeholder-gray-400 focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white"
+        >
+          Get Info
+        </button>
+      </form>
+
+      <div id="Info" class="bg-gray-900 p-4 rounded shadow-lg relative"></div>
+    </div>
+
+    <script src="profile.js"></script>
+  </body>
+</html>
