@@ -1,0 +1,98 @@
+body {
+  width: 790px;
+  height: 500px;
+  border: 2px solid rgb(0, 0, 0);
+  margin-left: 200px;
+  margin-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 20px;
+}
+.box {
+  background-color: greenyellow;
+  border: 4px solid black;
+}
+.box-1 {
+  width: 100px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-2 {
+  width: 500px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-3 {
+  width: 100px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-4 {
+  width: 450px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-5 {
+  width: 100px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-6 {
+  width: 150px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-7 {
+  width: 100px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-8 {
+  width: 150px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-9 {
+  width: 450px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-10 {
+  width: 150px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-11 {
+  width: 100px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-12 {
+  width: 150px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-13 {
+  width: 100px;
+  height: 110px;
+  margin: 5px 10px;
+}
+
+.box-14 {
+  width: 150px;
+  height: 110px;
+  margin: 5px 10px;
+}
