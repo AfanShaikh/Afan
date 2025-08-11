@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-image: url("../utils/blackbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  background-color: #87ceeb;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  min-width: 40px;
+  margin: 0 3px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  background-color: #e0f2f7;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.page-info {
+  background-color: #ffffff;
+  color: #333;
+  font-weight: bold;
+  cursor: default;
+  padding: 0 10px;
+  background-color: #f9f9f9;
+}
+
+.page-number.active {
+  background-color: #ffffff;
+  color: #1976d2;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.nav-label {
+  color: #1976d2;
+  padding: 0 10px;
+}
+
+.ellipsis {
+  background-color: transparent;
+  cursor: default;
+  color: #777;
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.pagination-item:not(.active):not(.page-info):not(.ellipsis):hover {
+  background-color: #cce6ff;
+}
