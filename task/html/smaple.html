@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fanatic — Landing</title>
+    <style>
+      :root {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .container {
+        width: 90%;
+        max-width: var(--container);
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(6px);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0)
+        );
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 18px 0;
+      }
+      .logo {
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--accent-1);
+      }
+      .logo span {
+        color: var(--accent-2);
+      }
+      .nav {
+        display: flex;
+        gap: 18px;
+        margin-left: 24px;
+      }
+      .nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .nav a:hover {
+        color: #fff;
+      }
+      .cta {
+        margin-left: auto;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 16px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .btn.primary {
+        background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+        color: white;
+        box-shadow: 0 6px 18px rgba(7, 8, 12, 0.6);
+      }
+      .btn.ghost {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        color: var(--muted);
+      }
+      .btn.large {
+        padding: 14px 20px;
+        border-radius: 12px;
+      }
+
+      .hero {
+        padding: 80px 0 60px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1fr 520px;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .hero-left h1 {
+        font-size: 42px;
+        margin: 0 0 16px;
+        line-height: 1.02;
+        letter-spacing: -0.4px;
+        color: #f8fbff;
+      }
+      .hero-left p {
+        color: var(--muted);
+        font-size: 16px;
+        margin-bottom: 22px;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 26px;
+      }
+
+      .stats {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .stats li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .stats strong {
+        font-size: 18px;
+      }
+      .stats span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .hero-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .mock {
+        position: relative;
+        width: 420px;
+        max-width: 100%;
+      }
+      .mock img {
+        width: 100%;
+        border-radius: 18px;
+        display: block;
+        box-shadow: 0 30px 80px rgba(12, 16, 25, 0.7);
+      }
+      .card-card {
+        position: absolute;
+        left: 18px;
+        bottom: 22px;
+        background: var(--glass);
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-weight: 700;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+        padding: 40px 0;
+      }
+      .feature {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .feature h3 {
+        margin: 0 0 8px;
+      }
+      .feature p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .site-footer {
+        padding: 28px 0;
+        color: var(--muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.02);
+      }
+
+      /* responsive */
+      @media (max-width: 1024px) {
+        .hero-inner {
+          grid-template-columns: 1fr 380px;
+        }
+      }
+      @media (max-width: 880px) {
+        .nav {
+          display: none;
+        }
+        .hero-inner {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .hero-left h1 {
+          font-size: 32px;
+        }
+        .hero-right {
+          order: -1;
+        }
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* small decorative gradient circles similar to the design */
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        right: -120px;
+        top: -80px;
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(124, 58, 237, 0.28),
+          transparent 30%
+        );
+        filter: blur(40px);
+        pointer-events: none;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        left: -160px;
+        bottom: -90px;
+        background: radial-gradient(
+          circle at 70% 70%,
+          rgba(6, 182, 212, 0.2),
+          transparent 30%
+        );
+        filter: blur(40px);
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo">FAN<span>ATIC</span></div>
+        </div>
+        <nav class="nav">
+          <a href="#">Home</a>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="cta">
+          <a class="btn primary" href="#">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-left">
+            <h1>Build beautiful React apps — fast.</h1>
+            <p>
+              Prebuilt components, carefully crafted layouts and ready-to-use
+              sections so you can ship faster.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary large" href="#">Download for free</a>
+              <a class="btn ghost" href="#">Explore components</a>
+            </div>
+
+            <ul class="stats">
+              <li><strong>12k+</strong><span>Users</span></li>
+              <li><strong>1.2k</strong><span>Stars</span></li>
+              <li><strong>500+</strong><span>Open-source</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-right">
+            <!-- Using the image the user sent as a visual reference/hero mock -->
+            <div class="mock">
+              <img
+                src="https://graphberry-imgs.imgix.net/fanatic-free-react-landing-page.png?auto=compress,format&q=80&w=800"
+                alt="mockup"
+              />
+              <div class="card-card">Fanatic UI Kit</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features container">
+        <div class="feature">
+          <h3>Ready sections</h3>
+          <p>
+            Landing, pricing, documentation and more — combine them to launch
+            quickly.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Customizable</h3>
+          <p>Fully responsive and easy to tweak using CSS variables.</p>
+        </div>
+        <div class="feature">
+          <h3>Accessible</h3>
+          <p>Semantic HTML and keyboard-friendly components by default.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © <span id="yr"></span> Fanatic — Free React Landing. Built with ♥
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
