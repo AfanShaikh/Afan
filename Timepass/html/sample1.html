@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAMES - Destiny Calculator</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .game-container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            color: #764ba2;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #f0f0f0;
+            border-radius: 8px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            flex: 2;
+            background: #764ba2;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .share-btn {
+            background: #25d366;
+            margin-top: 15px;
+            width: 100%;
+            display: none;
+        }
+
+        button.reset-btn {
+            flex: 1;
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        #result {
+            margin-top: 25px;
+            min-height: 50px;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.03); }
+        }
+
+        .calculating {
+            animation: pulse 0.6s infinite alternate;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .final-result {
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ff416c;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="game-container" id="card">
+
+    <h1>🔥 FLAMES</h1>
+    <p>Discover your relationship's fate</p>
+
+    <input type="text" id="name1" placeholder="Name 1" autocomplete="off">
+    <input type="text" id="name2" placeholder="Name 2" autocomplete="off">
+
+    <div class="btn-group">
+        <button onclick="calculateFlames()">Reveal Destiny</button>
+        <button class="reset-btn" onclick="resetGame()">Reset</button>
+    </div>
+
+    <div id="result"></div>
+
+    <button id="shareBtn" class="share-btn" onclick="shareResult()">
+        Share Result 📲
+    </button>
+
+</div>
+
+<script>
+
+    let currentFate = "";
+    let p1 = "";
+    let p2 = "";
+
+    function calculateFlames() {
+
+        p1 = document.getElementById('name1').value;
+        p2 = document.getElementById('name2').value;
+
+        const n1 = p1.toLowerCase().replace(/\s/g, '');
+        const n2 = p2.toLowerCase().replace(/\s/g, '');
+
+        if (!n1 || !n2) {
+            alert("Please enter both names!");
+            return;
+        }
+
+        document.getElementById('result').innerHTML = "Reading the stars...";
+        document.getElementById('card').classList.add('calculating');
+        document.getElementById('shareBtn').style.display = "none";
+
+        setTimeout(() => {
+
+            document.getElementById('card').classList.remove('calculating');
+
+            let a = n1.split("");
+            let b = n2.split("");
+
+            a.forEach((char, index) => {
+                let bIndex = b.indexOf(char);
+
+                if (bIndex !== -1) {
+                    a[index] = "";
+                    b[bIndex] = "";
+                }
+            });
+
+            const count = (a.join("") + b.join("")).length;
+
+            const flames = [
+                "Friends",
+                "Lovers",
+                "Affection",
+                "Marriage",
+                "Enemies",
+                "Siblings"
+            ];
+
+            if (count > 0) {
+
+                let flamesArr = [...flames];
+                let index = 0;
+
+                while (flamesArr.length > 1) {
+                    index = (index + count - 1) % flamesArr.length;
+                    flamesArr.splice(index, 1);
+                }
+
+                currentFate = flamesArr[0];
+
+            } else {
+                currentFate = "Soulmates";
+            }
+
+            document.getElementById('result').innerHTML = `
+                <span style="font-size: 0.8rem; color: #999;">
+                    THE VERDICT:
+                </span>
+                <div class="final-result">
+                    ${currentFate.toUpperCase()}
+                </div>
+            `;
+
+            document.getElementById('shareBtn').style.display = "block";
+
+        }, 1200);
+
+    }
+
+
+    // ✅ FIXED SHARE FUNCTION
+    async function shareResult() {
+
+        const text = `🔥 FLAMES RESULT 🔥
+${p1} + ${p2} = ${currentFate.toUpperCase()}!
+Check yours now!`;
+
+        if (navigator.share) {
+
+            try {
+
+                await navigator.share({
+                    title: "FLAMES Result",
+                    text: text
+                });
+
+            } catch (err) {
+                console.log("Share cancelled");
+            }
+
+        } else {
+
+            navigator.clipboard.writeText(text);
+            alert("Result copied to clipboard!");
+
+        }
+
+    }
+
+
+    function resetGame() {
+
+        document.getElementById('name1').value = "";
+        document.getElementById('name2').value = "";
+
+        document.getElementById('result').innerHTML = "";
+
+        document.getElementById('shareBtn').style.display = "none";
+
+    }
+
+</script>
+
+</body>
+</html>
